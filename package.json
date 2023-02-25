@@ -15,7 +15,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "lint": "eslint --ignore-path .gitignore . && stylelint **/*.scss",
-    "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix **/*.scss"
+    "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix **/*.scss",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -79,6 +81,7 @@
     "@types/react-dom": "^18.0.11",
     "cypress": "^10.3.0",
     "eslint-config-codely": "^2.1.3",
+    "gh-pages": "^5.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest-transform-stub": "^2.0.0",
     "sass": "^1.58.3",
